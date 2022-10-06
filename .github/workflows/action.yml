@@ -29,20 +29,22 @@ jobs:
     - name: Print package list
       run: pip list
     - name: Test xarray
-      run: python -c "import xarray; print('done')"
+      run: python -c "import xarray"
       
     - name: Install h5netcdf
       run: pip install h5netcdf
     - name: Print package list
       run: pip list
     - name: Test xarray
-      run: python -c "import xarray; print('done')"
+      run: python -c "import xarray"
    
     - name: Install netcdf4
       run: pip install netcdf4
     - name: Print package list
       run: pip list
     - name: Test xarray with import of h5netcdf
-      run: python -c "import h5netcdf; import xarray; print('done')" 
+      run: python -c "import h5netcdf; import xarray" 
+    - name: Test xarray with import of h5netcdf
+      run: python -c "import h5netcdf; import xarray as xr;xr.show_versions()"
     - name: Test xarray
-      run: python -c "import xarray; print('done')" 
+      run: python -c "import xarray" 
