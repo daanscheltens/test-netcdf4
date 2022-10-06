@@ -42,5 +42,7 @@ jobs:
       run: pip install netcdf4
     - name: Print package list
       run: pip list
+    - name: Test xarray with import of h5netcdf
+      run: python -c "import h5netcdf; import xarray; print('done')" 
     - name: Test xarray
       run: python -c "import xarray; print('done')" 
